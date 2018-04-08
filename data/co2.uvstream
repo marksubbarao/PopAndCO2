@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DataStream version="0.1">
+    <PrimitiveType>points</PrimitiveType>
+    <DataBindings>
+        <Variable>
+            <Name>year</Name>         
+            <Type>float</Type>
+        </Variable>                         
+        <Variable>
+            <Name>longitude</Name>         
+            <Type>float</Type>
+        </Variable>             
+        <Variable>
+            <Name>latitude</Name>         
+            <Type>float</Type>
+        </Variable>             
+        <Variable>
+            <Name>co2</Name>         
+            <Type>float</Type>
+        </Variable>             
+    </DataBindings>
+
+    <CSVData>
+        <Path>co2.csv</Path>
+        <Headers>
+            <Variable>              
+                <Cols>0</Cols>
+            </Variable>
+            <Variable>              
+                <Cols>1</Cols>
+            </Variable>                     
+            <Variable>              
+                <Cols>2</Cols>
+            </Variable>                     
+            <Variable>              
+                <Cols>3</Cols>
+            </Variable>                                        
+         </Headers>
+    </CSVData>
+</DataStream>  
