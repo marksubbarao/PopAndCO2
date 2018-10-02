@@ -12,9 +12,10 @@ uniform mat4 uv_scene2ObjectMatrix;
 uniform int uv_simulationtimeDays;
 uniform float uv_simulationtimeSeconds;
 uniform float uv_fade;
+uniform sampler2D stateTexture;
 
 uniform bool simBindRealtime;
-uniform float showTime;
+
 uniform float popSize;
 
 in float Longitude[];
@@ -114,6 +115,7 @@ void drawFlatSprite(vec2 lonlat, float radius, float rotation)
 
 void main()
 {
+    float showTime=texture(stateTexture, vec2(0.5)).r;	
 	boost = 0;
 	float yrs = 365.2425;
 	float showYear = 1970. + (uv_simulationtimeDays )/yrs;
